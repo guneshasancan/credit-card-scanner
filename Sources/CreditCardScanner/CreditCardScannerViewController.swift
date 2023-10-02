@@ -37,6 +37,8 @@ open class CreditCardScannerViewController: UIViewController {
     public var cameraViewCreditCardFrameStrokeColor: UIColor = .white
     public var cameraViewMaskLayerColor: UIColor = .black
     public var cameraViewMaskAlpha: CGFloat = 0.7
+    public var titleLabelFont: UIFont = .systemFont(ofSize: 16)
+    public var subtitleLabelFont: UIFont = .systemFont(ofSize: 16)
 
     // MARK: - Subviews and layers
 
@@ -141,10 +143,10 @@ private extension CreditCardScannerViewController {
         titleLabel.text = titleLabelText
         titleLabel.textAlignment = .center
         titleLabel.textColor = labelTextColor
-        titleLabel.font = .preferredFont(forTextStyle: .largeTitle)
+        titleLabel.font = titleLabelFont
         subtitleLabel.text = subtitleLabelText
         subtitleLabel.textAlignment = .center
-        subtitleLabel.font = .preferredFont(forTextStyle: .title3)
+        subtitleLabel.font = subtitleLabelFont
         subtitleLabel.textColor = labelTextColor
         subtitleLabel.numberOfLines = 0
         cancelButton.setTitle(cancelButtonTitleText, for: .normal)
